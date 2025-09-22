@@ -16,8 +16,8 @@
       color: white;
       padding: 20px;
     }
-    nav {
-      margin-top: 50px;
+    h1 {
+      margin: 0;
     }
     nav a {
       display: block;
@@ -34,6 +34,19 @@
     nav a:hover {
       background: #005fa3;
     }
+    section {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      text-align: left;
+      line-height: 1.5;
+    }
+    section h2, section h3 {
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
@@ -41,11 +54,58 @@
     <h1>TP DATOS PERSONALES - TOMMY WASSERMAN</h1>
   </header>
 
+  <!-- Presentación -->
+  <section id="intro">
+    <h2>Trabajo Práctico – Visualización de datos personales</h2>
+
+    <h3>Motivación</h3>
+    <p>
+      Mi objetivo fue analizar mis entrenamientos de los últimos 15 días, observando la frecuencia de cardio,
+      el tiempo invertido y la distribución de actividades (gimnasio, natación y descanso). 
+      La motivación fue entender mis hábitos y detectar oportunidades de mejora.
+    </p>
+
+    <h3>Datos utilizados</h3>
+    <ul>
+      <li><strong>Fuente:</strong> registro personal de entrenamientos (15 días de agosto).</li>
+      <li><strong>Variables:</strong> fecha, actividad (Gym/Swim/Rest), tiempo (minutos), cardio (sí/no), día de la semana, grupo muscular.</li>
+      <li><strong>Preparación:</strong> junte todo en una tabla diaria y exporté a CSV para usar en las distintas herramientas.</li>
+    </ul>
+
+    <h3>¿Cómo lo visualicé?</h3>
+    <ul>
+      <li><strong>Datawrapper:</strong> gráfico de barras comparando <em>Días de Cardio (7)</em> vs <em>Días de Descanso de Toda Actividad (2)</em>.</li>
+      <li><strong>Flourish:</strong> gráfico de líneas con el <em>tiempo</em> de entrenamiento por día, mostrando picos de hasta 90 minutos y días sin actividad.</li>
+      <li><strong>RAWGraphs:</strong> gráfico de barras por actividad: <em>Gym (7 veces)</em>, <em>Natacion (4 veces)</em> y <em>Descanso (2 veces)</em>.</li>
+      <li><strong>Power BI:</strong> gráfico de torta de cardio: <em>Sí (53,3%)</em> frente a <em>No (46,6%)</em>.</li>
+    </ul>
+
+    <h3>Principales hallazgos</h3>
+    <ul>
+      <li><strong>Balance:</strong> predomina el entrenamiento: 13 días de actividad frente a solo 2 de descanso.</li>
+      <li><strong>Patrón temporal:</strong> la duración varía mucho; algunos días llegan a 90 minutos mientras que otros fueron de 0.</li>
+      <li><strong>Actividades:</strong> el gimnasio es lo más frecuente, seguido por natación; el descanso aparece en menor medida.</li>
+      <li><strong>Cardio:</strong> el 53% de los días incluyeron cardio, lo que refleja constancia en mantener la resistencia aeróbica.</li>
+    </ul>
+
+    <h3>Conclusiones</h3>
+    <p>
+      Los gráficos muestran que entreno de manera constante y con buena variedad, aunque con poco descanso (solo 2 días).
+      Como mejora, podría equilibrar mejor la recuperación para optimizar resultados. 
+      También sería útil seguir registrando más variables, como sueño y esfuerzo percibido, para cruzar datos con el rendimiento.
+    </p>
+
+    <p style="color:#666;font-size:.9rem;margin-bottom:0">
+      Herramientas utilizadas: Datawrapper, Flourish, RAWGraphs y Power BI. Datos: registro personal de 15 días de agosto.
+    </p>
+  </section>
+
+  <!-- Botones de navegación -->
   <nav>
-    <a target="_blank" href="https://tommywass.github.io/INFOVIS/datawrappertp.html">📘 Data Wrapper</a>
-    <a target="_blank" href="https://tommywass.github.io/INFOVIS/powerbitp.html">📊 Power BI</a>
+    <a target="_blank" href="https://tommywass.github.io/INFOVIS/datawrappertp.html">📊 Data Wrapper</a>
+    <a target="_blank" href="https://tommywass.github.io/INFOVIS/powerbitp.html">📈 Power BI</a>
     <a target="_blank" href="https://tommywass.github.io/INFOVIS/flourishtp.html">🌸 Flourish</a>
-    <a target="_blank" href="https://tommywass.github.io/INFOVIS/rawgraphstp.html">📈 RawGraphs</a>
+    <a target="_blank" href="https://tommywass.github.io/INFOVIS/rawgraphstp.html">📉 RawGraphs</a>
   </nav>
 </body>
 </html>
